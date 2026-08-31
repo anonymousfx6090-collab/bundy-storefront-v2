@@ -1,0 +1,31 @@
+# Project TODO
+
+- [x] Define the database-backed product catalog and public query layer.
+- [x] Add owner-only product management operations for adding, editing, publishing, and removing catalog products.
+- [x] Build the responsive public storefront with Bauhaus-inspired branding, hero, collection navigation, search, and filters.
+- [x] Build product detail pages with supplied imagery, product metadata, and the exact “View on Temu” external action.
+- [x] Add loading, empty, and error states across public catalog experiences.
+- [x] Add automated tests for catalog data and access-control behavior.
+- [x] Verify desktop and mobile storefront layout, owner studio route, type safety, and automated authorization coverage.
+- [x] Confirm the owner-created product’s external destination link and shopper outbound click behavior.
+- [x] Confirm the owner catalog Edit action on the published Cap without altering the client’s live product data.
+- [x] Verify a published owner-created product appears on the public browse grid and neutral product-detail page.
+- [x] Make the owner’s direct product-upload, publish, and visibility controls more explicit and streamlined.
+- [x] Refine public browsing and product-card presentation with Temu-inspired retail cues while preserving Bundy’s original Bauhaus identity.
+- [x] Test the refined owner publishing workflow and responsive public storefront.
+- [x] Review the supported sign-in model and current owner role assignment.
+- [x] Restrict administrator privileges to the designated owner account and improve the locked admin entry state.
+- [x] Test owner and non-owner authorization boundaries, then document the sign-in workflow.
+- [x] Design a single pre-created client administrator account with secure email-and-password login.
+- [x] Replace the current owner sign-in path with the locked client-admin login form and server-side session checks.
+- [x] Validate that public users cannot sign up or access the client-admin catalog, then request the client credentials securely.
+- [x] Assess and document the Vercel deployment path for the full-stack storefront, including database, storage, and secret migration requirements.
+- [x] Remove all shopper-facing Temu wording, including public actions, product detail copy, page metadata, and storefront descriptions.
+- [x] Preserve the owner-only destination-link field and verify visitors do not see the marketplace name before leaving the storefront.
+- [x] Add the exact affiliate disclosure to the homepage footer and verify it on desktop and mobile.
+- [x] Move the exact affiliate disclosure from the footer into the homepage hero and verify desktop/mobile readability.
+- [x] Increase the hero affiliate disclosure size and change shopper outbound actions to the exact text “View on Temu.”
+- [ ] Choose an external managed database and image-storage provider for Vercel.
+- [ ] Adapt the full-stack app, API routing, database, and image uploads for Vercel Functions.
+- [ ] Connect GitHub/Vercel configuration and validate the production deployment.
+- [ ] Connect the supplied GitHub repository and push the current Bundy storefront source.
