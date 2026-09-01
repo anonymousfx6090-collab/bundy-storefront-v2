@@ -1,6 +1,9 @@
 export type AccountRole = "admin" | "user";
 
-/** OAuth identities are shoppers only; the client administrator uses a separate password session. */
-export function roleForAccount(): AccountRole {
-  return "user";
+/**
+ * Only the project owner identity supplied by the platform may hold the admin role.
+ * No public sign-in or client request can elevate a user to admin.
+ */
+export function roleForAccount(openId: string, ownerOpenId: string): AccountRole {
+  return openId === ownerOpenId ? "admin" : "user";
 }
