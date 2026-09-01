@@ -1,7 +1,6 @@
 import { and, desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertProduct, InsertUser, products, users } from "../drizzle/schema";
-import { roleForAccount } from "../shared/access";
 import { toProductSlug } from "../shared/catalog";
 import { ENV } from "./_core/env";
 
@@ -40,9 +39,7 @@ export async function upsertUser(user: InsertUser): Promise<void> {
   });
   values.lastSignedIn = user.lastSignedIn ?? new Date();
   updateSet.lastSignedIn = values.lastSignedIn;
-  // OAuth-authenticated identities are always standard users. Catalog access is
-  // reserved for the separate fixed client-admin password session.
-  values.role = roleForAccount();
+  values.role = user.role ?? (user.openId === ENV.ownerOpenId ? "admin" : "user");
   updateSet.role = values.role;
 
   await db.insert(users).values(values).onDuplicateKeyUpdate({ set: updateSet });
