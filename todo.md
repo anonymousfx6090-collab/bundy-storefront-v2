@@ -29,3 +29,5 @@
 - [ ] Adapt the full-stack app, API routing, database, and image uploads for Vercel Functions.
 - [ ] Connect GitHub/Vercel configuration and validate the production deployment.
 - [ ] Connect the supplied GitHub repository and push the current Bundy storefront source.
+- [ ] Reinspect and repair the Vercel project/deployment created for Bundy.
+- [ ] Make the current source deployable on Vercel and verify the live URL.
